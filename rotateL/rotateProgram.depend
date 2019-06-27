@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1561559442 source:d:\skills\embedded amit\exercises\rotateprogram\main.c
+	<stdio.h>
+	<stdlib.h>
+
