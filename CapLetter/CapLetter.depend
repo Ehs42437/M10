@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1561787396 source:d:\skills\embedded amit\exercises\capletter\main.c
+	<stdio.h>
+	<stdlib.h>
+
