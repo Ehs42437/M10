@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1562290495 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\rotate shift\main.c
+	<stdio.h>
+	<stdlib.h>
+
