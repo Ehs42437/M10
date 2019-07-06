@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1561127685 source:c:\users\mac\desktop\amit labs\lab1\main.c
+	<stdio.h>
+	<stdlib.h>
+

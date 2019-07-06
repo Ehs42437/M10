@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1561734244 source:c:\users\mac\desktop\amit labs\fri28\untitled1.c
+	<stdio.h>
+	<stdlib.h>
+
+1561737986 source:c:\users\mac\desktop\amit labs\fri28\main.c
+	<stdio.h>
+	<stdlib.h>
+
