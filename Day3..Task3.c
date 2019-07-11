@@ -10,7 +10,7 @@ int main()
     printf("Please enter your mark: ");
 
     scanf("%d", &mark);
-
+//this switch statement supported only in GNUC standard
     switch(mark)
     {
         case 0 ... 49:
