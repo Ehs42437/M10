@@ -5,7 +5,7 @@
 z;  aw x+y;   has no effect
 
 (int x); no error or warning ... el effect bt3ha fl statement de bas msh forever */
-
+(int) x;
 
 int main()
 {
