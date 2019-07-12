@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1562342024 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\lab4\main.c
+	<stdio.h>
+	<stdlib.h>
+

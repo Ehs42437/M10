@@ -1,0 +1,4 @@
+const can be change in run time but prevent build to change it 
+volatile prevent optimization to specfic block
+static like private in global but in local it changes life time
+extern like public which gives files access to value

@@ -10,7 +10,7 @@ int main()
     while(1){
         printf("Enter Char : ");
         scanf("%c", &originalChar);
-//this switch statement supported only in GNU C standard
+
         switch(originalChar){
             case 'a' ... 'z' : printf("Converted Char to Upper : %c\n", (originalChar - 32));
                                break;
