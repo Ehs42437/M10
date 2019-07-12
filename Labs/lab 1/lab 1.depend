@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1561127780 source:e:\embeded systems course\labs\lab 1\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1561212341 source:e:\embeded systems course\github storage\m10\lab 1\main.c
+	<stdio.h>
+	<stdlib.h>
+

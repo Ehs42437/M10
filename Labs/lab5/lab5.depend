@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1561813682 source:e:\embeded systems course\labs\lab5\main.c
+	<stdio.h>
+	<stdlib.h>
+

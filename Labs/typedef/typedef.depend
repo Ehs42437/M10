@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1562938571 source:e:\embeded systems course\labs\typedef\main.c
+	<stdio.h>
+	<stdlib.h>
+
