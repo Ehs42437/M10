@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1562340568 source:d:\skills\embedded amit\exercises\macrolikefunction\main.c
+	<stdio.h>
+	<stdlib.h>
+

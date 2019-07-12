@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1562417740 source:d:\skills\embedded amit\exercises\l7t1\main.c
+	<stdio.h>
+	<stdlib.h>
+
