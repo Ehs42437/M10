@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1561733131 source:d:\skills\embedded amit\exercises\forloop\main.c
+	<stdio.h>
+	<stdlib.h>
+

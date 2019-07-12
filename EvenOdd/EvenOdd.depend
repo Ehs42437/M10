@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1561222996 source:d:\skills\embedded amit\exercises\evenodd\main.c
+	<stdio.h>
+	<stdlib.h>
+

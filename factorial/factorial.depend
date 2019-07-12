@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1562337124 source:d:\skills\embedded amit\exercises\factorial\main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+
