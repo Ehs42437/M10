@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1562913339 source:d:\skills\embedded amit\exercises\reversearray\main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdio.h>
+

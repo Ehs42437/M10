@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1562342128 source:d:\skills\embedded amit\exercises\arraypointer\main.c
+	<stdio.h>
+	<stdlib.h>
+
