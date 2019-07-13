@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1561931045 source:d:\biomedical engineer\buissness\embedded\amit\lower to upper\main.c
+	<stdio.h>
+	<conio.h>
+	<string.h>
+
