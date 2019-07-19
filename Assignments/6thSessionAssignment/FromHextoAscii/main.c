@@ -1,30 +1,35 @@
 #include <stdio.h>
 #include <string.h>
 
-int hex_to_int(char c){
-        int first = c / 16 - 3;
-        int second = c % 16;
-        int result = first*10 + second;
-        if(result > 9) result--;
-        return result;
+int htoi(const char*);
+int getRawInt(char);
+
+int main()
+{
+        char *hex = "6c";
+        printf("%c", htoi(hex));
+        return 0;
 }
 
-int hex_to_ascii(char c, char d){
-        int high = hex_to_int(c) * 16;
-        int low = hex_to_int(d);
-        return high+low;
+int htoi(const char *hex)
+{
+    const int LEN = strlen(hex) - 1;
+    int power = 1;
+    int dec = 0;
+
+    for(int i = LEN; i>=0 ; i--)
+    {
+        dec +=getRawInt(hex[i])*power;
+        power *= 16;
+    }
+    return dec;
 }
 
-int main(){
-        const char* st = "64";
-        int length = strlen(st);
-        int i;
-        char buf = 0;
-        for(i = 0; i < length; i++){
-                if(i % 2 != 0){
-                        printf("%c", hex_to_ascii(buf, st[i]));
-                }else{
-                        buf = st[i];
-                }
-        }
+int getRawInt(char c)
+{
+    if(isalpha(c))
+    {
+        return toupper(c) - 'A' +10;
+    }
+    return c - '0';
 }
