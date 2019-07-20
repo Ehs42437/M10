@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1563610693 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1563610556 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\linkedlist.c
+	"linkedlist.h"
+
+1563610756 f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\linkedlist.h
+	"stdlib.h"
+
