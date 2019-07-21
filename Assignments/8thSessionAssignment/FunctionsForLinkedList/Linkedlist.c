@@ -15,7 +15,7 @@ extern unsigned char createList(ST_Node *pFirst)
         else
         {
          pHead->Data = pFirst->Data;
-         pHead->pNext = nullptr ;
+         pHead->pNext = 0;
          u8Ret = 0;
         }
 
@@ -88,7 +88,7 @@ extern unsigned char addTail( ST_Node *pTail)
         else
         {
             pTmp->pNext = pNewNode;
-            pNewNode->pNext = nullptr;
+            pNewNode->pNext = 0;
             pTail = pNewNode;
             u8Ret = 0;
         }
@@ -116,7 +116,7 @@ extern unsigned char DeleteTail(void)
            pTmp = pTmp-> pNext;
        }
        free(pTmp);
-       pTail->pNext = nullptr;
+       pTail->pNext = 0;
        u8ret = 0;
     }
 
@@ -134,7 +134,7 @@ extern unsigned char addElementbyIndex(int EValue,int EIndex)
     {
         createlist(pHead);
         pHead->Data = EValue;
-        pHead->pNext = nullptr;
+        pHead->pNext = 0;
         u8ret = 0;
     }
     else
@@ -179,7 +179,7 @@ extern unsigned char DeleteElementByIndex(int EIndex)
             pTmp = pTmp->pNext;
             u8cnt++;
         }
-       pTmp->Data = nullptr;
+       pTmp->Data = 0;
        u8ret = 0;
     }
   return u8ret;
