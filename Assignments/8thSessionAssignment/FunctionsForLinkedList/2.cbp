@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="LinkedQueue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="LinkedQueue.h" />
+		<Unit filename="LinkedStack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="LinkedStack.h" />
 		<Unit filename="Linkedlist.c">
 			<Option compilerVar="CC" />
 		</Unit>

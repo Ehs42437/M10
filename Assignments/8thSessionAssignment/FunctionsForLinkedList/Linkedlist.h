@@ -1,20 +1,27 @@
-#ifndef LINKEDLIST_H_INCLUDED
-#define LINKEDLIST_H_INCLUDED
-#includ "stdlib.h"
-typedef struct Node
-{
-    int Data;
-    struct Node *pNext;
-}ST_Node;
+	#ifndef LINKEDLIST_H_INCLUDED
+	#define LINKEDLIST_H_INCLUDED
+	#include "stdlib.h"
+	#include "stdio.h"
 
-extern unsigned char createList(ST_Node *pFirst);
-extern unsigned char addHead (ST_Node *pNewHead);
-extern unsigned char deleteHead (void);
-extern unsigned char addTail(ST_Node *pTail);
-extern unsigned char DeleteTail(void);
-extern unsigned char addElementbyIndex(int EValue,int EIndex);
-extern unsigned char CountNodes(void);
-extern unsigned char DeleteElementByIndex(int EIndex);
-extern unsigned char PrintElementsofLinkedList(void);
+	// define new type Node
+	typedef struct Node
+	{
+		int Data ;
+		//points to the following node
+		struct Node *pNext ;
+	}ST_Node;
 
-#endif // LINKEDLIST_H_INCLUDED
+
+	extern unsigned char createList (ST_Node * pFirst ) ; //Create first node on the list
+	extern unsigned char addHead (ST_Node * pNewHead) ; //add new Head node
+	extern unsigned char deleteHead (void); //delete Head node
+	extern unsigned char addTail  (ST_Node * pNewTail); //add node at the end
+	/**Assignment starts here **/
+	extern unsigned char printList (void); //printList upon to first node
+	extern unsigned char listLength (void); //return length of list
+	extern unsigned char readElementByIndex(int index, ST_Node *output);
+	extern unsigned char deleteTail(void); //delete last node
+	extern unsigned char addNode(ST_Node * pNewNode, unsigned char index); // add node according to index
+	extern unsigned char deleteNode(unsigned char index); // delete node according to index
+
+	#endif // LINKEDLIST_H_INCLUDED
