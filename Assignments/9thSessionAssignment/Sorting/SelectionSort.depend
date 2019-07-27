@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1564246141 source:d:\biomedical engineer\buissness\embedded\c programming\m10\coursework\8thsessionwork\selectionsort\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1564251301 source:d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\sorting\main.c
+	<stdio.h>
+	<stdlib.h>
+	"SortingHeaders.h"
+
+1564249153 d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\sorting\sortingheaders.h
+
+1564250308 source:d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\sorting\sortingimplementations.c
+	"SortingHeaders.h"
+
