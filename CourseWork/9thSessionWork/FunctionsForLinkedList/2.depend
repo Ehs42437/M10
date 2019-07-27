@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1564027039 source:d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\8thsessionassignment\functionsforlinkedlist\linkedlist.c
+	"linkedlist.h"
+
+1564019793 d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\8thsessionassignment\functionsforlinkedlist\linkedlist.h
+	"stdlib.h"
+	"stdio.h"
+
+1564026977 source:d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\8thsessionassignment\functionsforlinkedlist\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Linkedlist.h"
+
+1564030770 source:d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\8thsessionassignment\functionsforlinkedlist\linkedstack.c
+	"LinkedStack.h"
+
+1564030718 d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\8thsessionassignment\functionsforlinkedlist\linkedstack.h
+	"LinkedList.h"
+
