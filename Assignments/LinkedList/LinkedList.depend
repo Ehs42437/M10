@@ -1,11 +1,28 @@
 # depslib dependency file v1.0
-1563610693 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\main.c
+1564226492 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\main.c
 	<stdio.h>
 	<stdlib.h>
+	"Queue.h"
+	"LinkedStack.h"
 
-1563610556 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\linkedlist.c
+1564226175 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\linkedlist.c
 	"linkedlist.h"
 
-1563610756 f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\linkedlist.h
+1564090242 f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\linkedlist.h
 	"stdlib.h"
+	"stdio.h"
+
+1564078827 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\linkedstack.c
+	"stdio.h"
+	"LinkedStack.h"
+
+1564078827 f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\linkedstack.h
+	"LinkedList.h"
+
+1564078666 f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\queue.h
+	"LinkedList.h"
+
+1564078666 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\linkedlist\queue.c
+	"stdio.h"
+	"Queue.h"
 

@@ -32,12 +32,12 @@
 
     extern unsigned char addHead(ST_Node * pNewHead)
     {
-        ST_Node * pTmp = 0 ; // here we declared a temp to create node, we don't access directly with pNewHead to make sure if addresses of arguments changed or deleted doesn't affect on code
+        ST_Node * pTmp = 0 ; // here we declared a temp to create node, we don't access directly with pNewHead to make sure if addresses of arguments changed or deleted not gonna affect on code
         unsigned char u8Ret = 0 ;
 
         if(pHead == 0 )
         {
-            u8Ret = createList(pNewHead) ;
+            u8Ret = createList(pNewHead) ;  // create list with this node
         }
         else //list exist
         {
@@ -48,10 +48,10 @@
             }
             else
             {
-                pTmp->Data  = pNewHead->Data ;
-                pTmp->pNext = pHead ;
-                pHead = pTmp ;
-                u8Ret = 0 ;
+                pTmp->Data  = pNewHead->Data ; // transfer data
+                pTmp->pNext = pHead ; //next node goes to old head
+                pHead = pTmp ; // update head position
+                u8Ret = 0;
             }
         }
 
@@ -63,15 +63,15 @@
         ST_Node * pTmp = 0 ;
         unsigned char u8Ret = 0 ;
 
-        if(pHead == 0 )
+        if(pHead == 0)
         {
              u8Ret = 1 ;
         }
         else
         {
             pTmp = pHead ;
-            pHead = pHead->pNext ;
-            free(pTmp) ;
+            pHead = pHead->pNext ;  //update head
+            free(pTmp) ; // delete old head
             u8Ret = 0 ;
         }
         return u8Ret ;
@@ -111,7 +111,7 @@
         return u8Ret ;
     }
 
-	extern unsigned char printList (ST_Node *pFirst)
+	extern unsigned char printList (void)
 	{
 		unsigned char u8Ret = 0; //result of function
 		ST_Node *pTmp  = 0; //temporary pointer of first node
@@ -123,7 +123,7 @@
 		}
 		else
 		{
-			pTmp = pFirst; //hold pFirst address
+			pTmp = pHead; //hold pFirst address
 
 			if(pTmp == 0)
 			{
@@ -131,64 +131,53 @@
 			}
 			else
 			{
-				while(pTmp -> pNext != 0)
+				while(pTmp  != 0)
 				{
 					printf("%d\n", pTmp -> Data);  //print all data of the following nodes
 					pTmp = pTmp -> pNext;
 				}
-
-				//check if list printed successfully
-				if(pTmp -> pNext != 0)
-				{
-					u8Ret = 1; //didn't print all list fail
-				}
-				else
-				{
-					u8Ret = 0;
-				}
+				u8Ret = 0;
 			}
 		}
         return u8Ret;
 	}
 
-    extern unsigned char listLength (void)
+    extern unsigned char listLength (unsigned char *pCnt)
     {
     	unsigned char nCnt =  0;  //node counter if returns 0  means it fail
+		unsigned char u8Ret = 0;
     	ST_Node *pTmp = 0;  //Temporary pointer holds head
 
     	if(pHead == 0)
 		{
-			nCnt = 0;//no head then fail
+			nCnt = 0;
+			u8Ret = 1;//no head then fail
 		}
 		else
 		{
 			pTmp = pHead;
 			if(pTmp == 0)
 			{
-				nCnt = 0;//couldn't catch fail
+				nCnt = 0;
+				u8Ret = 1;//couldn't catch fail
 			}
 			else
 			{
-				while(pTmp -> pNext != 0)
+				while(pTmp != 0)
 				{
 					nCnt++;
 					pTmp = pTmp -> pNext;
 				}
-
-				//check if list counted successfully
-				if(pTmp -> pNext != 0)
-				{
-					nCnt = 0; //didn't count all list
-				}
+				u8Ret = 0;
 			}
 		}
-		return nCnt;
+		*pCnt = nCnt;
+		return u8Ret;
     }
 
     extern unsigned char deleteTail (void)
     {
         ST_Node * pTmp = 0 ; //Temporary pointer catches head
-        ST_Node * pReleaseTmp = 0 ; //Temporary pointer catch pre-pTmp node
         unsigned char u8Ret = 0 ;
 
         if(pHead == 0 )
@@ -198,19 +187,26 @@
         else
         {
             pTmp = pHead ;
-            while(pTmp -> pNext != 0)
+            if(pTmp->pNext == 0)
 			{
-				pTmp = pTmp -> pNext; //get last node
-            }
-            pReleaseTmp =  (pTmp-1); // pre-last node
-            pReleaseTmp -> pNext = 0; //next refers to null
-            free(pTmp) ; //delete tail
+				free(pTmp);
+				pHead = 0;
+			}
+			else
+			{
+				while(pTmp -> pNext -> pNext != 0)
+				{
+					pTmp = pTmp -> pNext; //get last node
+				}
+				free(pTmp->pNext) ; //delete tail
+				pTmp->pNext = 0;
+			}
             u8Ret = 0 ;
         }
         return u8Ret ;
     }
 
-    extern unsigned char addNode (ST_Node * pNewNode, unsigned char index)
+    extern unsigned char addNodeByIndex (ST_Node * pNewNode, unsigned char index)
     {
 		ST_Node * pTmp = 0 ;  //catch head address
         ST_Node * pFollowingTmp = 0 ; //catch following node of pTmp
@@ -225,12 +221,12 @@
         else
         {
             pTmp = pHead ;
-            while (cnt != (index-1))
+            while (cnt < (index-1) && pTmp != 0)
             {
                 pTmp = pTmp -> pNext; //if index-1 not reached go to next pTmp gonna catch pre-index node
                 cnt++;
             }
-            pFollowingTmp =  (pTmp+1);//gonna catch the following node of pTmp
+            pFollowingTmp =  (pTmp->pNext);//gonna catch the following node of pTmp
             pNewNodeTmp = (ST_Node *) malloc(sizeof(ST_Node));//create new node
             if(pNewNodeTmp == 0 )
             {
@@ -247,11 +243,11 @@
         return u8Ret ;
     }
 
-	extern unsigned char deleteNode (unsigned char index)
+	extern unsigned char deleteNodeByIndex (unsigned char index)
 	{
 		ST_Node * pTmp = 0 ;//catch node gonna be deleted
         ST_Node * pFollowingTmp = 0 ;//next node of pTmp
-        ST_Node * pReverseTmp = 0 ;//pre-node of pTmp
+        ST_Node * pSelectedTmp = 0 ;//pre-node of pTmp
 	    unsigned char cnt = 0 ; //check if index reached
         unsigned char u8Ret = 0 ;
 
@@ -262,19 +258,46 @@
         else
         {
             pTmp = pHead ;
-            while(cnt != index)
+            while(cnt < (index-1))
 			{
 				pTmp = pTmp -> pNext;//if index not reached go to next
 				cnt++;
             }
-            pReverseTmp = (pTmp-1);// catch pre-node
-            pFollowingTmp =  (pTmp+1);// catch following node
-            pReverseTmp -> pNext = pFollowingTmp;// linking pre-node of the following one
-            free(pTmp) ; //delete node
+            pSelectedTmp = pTmp->pNext;// catch pre-node
+            pFollowingTmp =  pTmp->pNext->pNext;// catch following node
+            pTmp -> pNext = pFollowingTmp;// linking pre-node of the following one
+            free(pSelectedTmp) ; //delete node
             u8Ret = 0 ;
         }
         return u8Ret ;
 	}
+
+	extern unsigned char readElementByIndex(int index, ST_Node *output)
+	{
+		unsigned char u8Ret = 0;
+		int nCnt = 0;
+		ST_Node *pTmp = 0;
+
+		if(pHead == 0)
+		{
+			u8Ret  = 1;
+		}
+		else
+		{
+			pTmp = pHead;
+			while(nCnt < index && pTmp != 0)
+			{
+				pTmp = pTmp->pNext;
+				nCnt++;
+			}
+			output->Data = pTmp->Data;
+			output->pNext = pTmp->pNext;
+			u8Ret = 0;
+
+		}
+	    return u8Ret;
+	}
+
 
 
 

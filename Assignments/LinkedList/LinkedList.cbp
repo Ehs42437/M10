@@ -34,7 +34,18 @@
 		<Unit filename="LinkedList.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="LinkedList.cbp" />
+		<Unit filename="LinkedList.depend" />
 		<Unit filename="LinkedList.h" />
+		<Unit filename="LinkedList.layout" />
+		<Unit filename="LinkedStack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="LinkedStack.h" />
+		<Unit filename="Queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Queue.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
