@@ -24,10 +24,7 @@ extern void SelectionSort(int *pArr,int NoofElements)
          }
     }
     printf("The selection sorted array =\n");
-    for(int i = 0;i <= NoofElements -1 ;i++)
-    {
-        printf("%d\n",*(pArr+i));
-    }
+    printArray(pArr,NoofElements);
 
 }
 
@@ -44,25 +41,22 @@ extern void BubbleSort(int *pArr,int NoofElements)
       }
   }
    printf("The Bubble sorted array =\n");
-    for(int i = 0;i <= NoofElements -1 ;i++)
-    {
-        printf("%d\n",*(pArr+i));
-    }
+   printArray(pArr,NoofElements);
 }
 
-extern unsigned char MergeSort(int *pArr,int NoofElements)
+extern void MergeSort(int *pArr)
 {
-  unsigned char u8Ret;
   int mid = 0;
-  int Left[mid];
-  int right[NoofElements - mid];
+  int NoofElements = sizeof(pArr)/sizeof(int);
+  int Left[20];
+  int right[20];
 
-  if (NoofElements <2)
+  if (NoofElements < 2)
   {
-      u8Ret = 1;
+      return;
   }
   else
-    {
+  {
         mid = NoofElements / 2;
         for(int i = 0;i < mid - 1 ;i++)
         {
@@ -72,13 +66,10 @@ extern unsigned char MergeSort(int *pArr,int NoofElements)
         {
             right[i - mid] = *(pArr+i);
         }
-         MergeSort(Left,mid);
-         MergeSort(right,NoofElements-mid);
-         Merge(Left ,right ,pArr ,mid ,NoofElements-mid ,NoofElements);
-         u8Ret = 0;
-    }
-
-    return u8Ret;
+         MergeSort(Left);
+         MergeSort(right);
+         Merge(Left ,right ,pArr ,mid ,NoofElements - mid ,NoofElements);
+  }
 }
 
 extern void Merge(int *pLeft ,int *pRight,int *pArr,int NL,int NR ,int N)
@@ -113,4 +104,13 @@ extern void Merge(int *pLeft ,int *pRight,int *pArr,int NL,int NR ,int N)
         k++;
     }
 
+}
+
+extern void printArray(int *pArr,int NoofElements)
+{
+
+    for(int k = 0;k <= NoofElements - 1;k++)
+          {
+            printf("%d\n",*(pArr+k));
+          }
 }

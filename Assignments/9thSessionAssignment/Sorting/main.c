@@ -16,25 +16,12 @@ int main()
         scanf(" %d",&arr[i]);
     }
     printf("The array =\n");
-    for(i = 0;i <= NoofElements - 1;i++)
-    {
-        printf("%d\n",arr[i]);
-    }
-
+    printArray(arr,NoofElements);
     SelectionSort(arr,NoofElements);
     BubbleSort(arr,NoofElements);
-    if(!MergeSort(arr,NoofElements))
-    {
-     printf("The Merge Sorted array =\n");
-     for(i = 0;i <= NoofElements - 1;i++)
-     {
-        printf("%d\n",arr[i]);
-     }
-    }
-    else
-    {
-        printf("Error in merging ");
-    }
+    MergeSort(arr);
+    printf("The Merge Sorted array =\n");
+    printArray(arr,NoofElements);
 
     return 0;
 }
