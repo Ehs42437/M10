@@ -172,7 +172,10 @@
 
     extern unsigned char deleteTail (void)
     {
-        ST_Node * pTmp = 0 ; //Temporary pointer catches head
+        ST_Node * pTmp = 0;
+        ST_Node * Next = 0;
+        ST_Node * pTail = 0;
+
         unsigned char u8Ret = 0 ;
 
         if(pHead == 0 )
@@ -184,9 +187,23 @@
             pTmp = pHead ;
             while(pTmp != 0)
 			{
-				pTmp = pTmp -> pNext; //get last node
+				Next = pTmp->pNext;
+				if(Next != 0)
+                {
+                    if(Next->pNext == 0)
+                     {
+                       pTail = pTmp;
+                       pTail->pNext = 0;
+                       free(Next);
+                     }
+                }
+                else
+                {
+                    free(pTmp);
+                }
+                pTmp = pTmp->pNext;
             }
-            free(pTmp) ; //delete tail
+
             u8Ret = 0 ;
         }
         return u8Ret ;

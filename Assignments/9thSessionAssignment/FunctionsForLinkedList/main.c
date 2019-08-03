@@ -73,8 +73,9 @@ int main()
                                           printList();
                                           printf("NO OF NODES = %d\n",NoofNodes);
                                           printf("The Read Element = %d\n",Valu);
-                                          deleteHead();
-                                          printf("The list after deleting Head = \n");
+                                          //deleteHead();
+                                          deleteTail();
+                                          printf("The list after deleting Tail = \n");
                                           printList();
                                         }
                                     }

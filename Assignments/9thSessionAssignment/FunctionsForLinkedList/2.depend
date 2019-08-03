@@ -17,3 +17,29 @@
 1564030718 d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\8thsessionassignment\functionsforlinkedlist\linkedstack.h
 	"LinkedList.h"
 
+1564817817 source:d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\functionsforlinkedlist\linkedlist.c
+	"linkedlist.h"
+
+1564019793 d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\functionsforlinkedlist\linkedlist.h
+	"stdlib.h"
+	"stdio.h"
+
+1564030770 source:d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\functionsforlinkedlist\linkedstack.c
+	"LinkedStack.h"
+
+1564030718 d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\functionsforlinkedlist\linkedstack.h
+	"LinkedList.h"
+
+1564035094 source:d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\functionsforlinkedlist\linkedqueue.c
+	"LinkedQueue.h"
+
+1564035032 d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\functionsforlinkedlist\linkedqueue.h
+	"Linkedlist.h"
+
+1564035125 source:d:\biomedical engineer\buissness\embedded\c programming\m10\assignments\9thsessionassignment\functionsforlinkedlist\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Linkedlist.h"
+	"LinkedStack.h"
+	"LinkedQueue.h"
+
