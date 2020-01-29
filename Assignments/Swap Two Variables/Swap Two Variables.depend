@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1562842676 source:f:\engineering\embedded systems amit\embedded c\codeblocks\assignments\swap two variables\main.c
+	<stdio.h>
+	<stdlib.h>
+
